@@ -19,6 +19,7 @@
   "homepage": "https://github.com/F4lkr4m/delivery#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "handlebars": "^4.7.7",
     "nodemon": "^2.0.12"
   }
 }
