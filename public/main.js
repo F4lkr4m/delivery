@@ -1,4 +1,4 @@
-import {Navbar} from "./components/Navbar/Navbar.js";
+ import {Navbar} from "./components/Navbar/Navbar.js";
 
 const application = document.getElementById("app");
 

@@ -2,7 +2,7 @@
   "name": "delivery",
   "version": "1.0.0",
   "description": "delivery",
-  "main": "index.js",
+  "main": "public/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
@@ -18,8 +18,15 @@
   },
   "homepage": "https://github.com/F4lkr4m/delivery#readme",
   "dependencies": {
+    "babel": "^6.23.0",
+    "css-loader": "^6.2.0",
     "express": "^4.17.1",
     "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.1",
     "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
   }
 }

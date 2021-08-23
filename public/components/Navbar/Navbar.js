@@ -1,3 +1,5 @@
+import NavHBS from "./Navbar.hbs"
+
 export class Navbar {
 
     constructor(parent) {
@@ -5,6 +7,7 @@ export class Navbar {
     }
 
     render() {
-        this.parent.innerHTML = Handlebars.templates.Navbar;
+        //this.parent.innerHTML = Handlebars.templates.Navbar;
+        this.parent.innerHTML = NavHBS({});
     }
 }
