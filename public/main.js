@@ -3,8 +3,8 @@
 const application = document.getElementById("app");
 
 let hello = document.createElement("h1");
-hello.textContent = "Hello world";
+hello.textContent = 'Hello World'
 
-application.appendChild(hello);
 const nav = new Navbar(application);
 nav.render();
+ application.appendChild(hello);

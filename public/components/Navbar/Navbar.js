@@ -7,7 +7,6 @@ export class Navbar {
     }
 
     render() {
-        //this.parent.innerHTML = Handlebars.templates.Navbar;
         this.parent.innerHTML = NavHBS({});
     }
 }
