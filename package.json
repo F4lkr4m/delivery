@@ -1,0 +1,19 @@
+{
+  "name": "delivery",
+  "version": "1.0.0",
+  "description": "delivery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/F4lkr4m/delivery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/F4lkr4m/delivery/issues"
+  },
+  "homepage": "https://github.com/F4lkr4m/delivery#readme"
+}
