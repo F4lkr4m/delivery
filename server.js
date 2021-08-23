@@ -3,10 +3,10 @@ const path = require("path");
 
 const app = express();
 
-app.use("/static", express.static(path.resolve(__dirname, "", "public")))
+app.use(express.static(path.resolve(__dirname, "", "public/")))
 
-app.get("/*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "public", "index.html"));
+port = process.env.PORT || 8081;
+
+app.listen(port, function () {
+    console.log(`Server listening port ${port}`);
 });
-
-app.listen(process.env.PORT || 8081, () => console.log("server running..."));
