@@ -2,7 +2,7 @@ module.exports = {
     mode: "development",
     entry: './public/main.js',
     output: {
-        filename: 'bundle.js'
+        filename: '../public/bundle.js'
     },
     module: {
         rules: [
