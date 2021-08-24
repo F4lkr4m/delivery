@@ -9,13 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./public/components/Page/Page.pug":
+/*!*****************************************!*\
+  !*** ./public/components/Page/Page.pug ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"page__body\\\"\\u003E\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack://delivery/./public/components/Page/Page.pug?");
+
+/***/ }),
+
 /***/ "./public/components/ThugNavbar/Navbar.pug":
 /*!*************************************************!*\
   !*** ./public/components/ThugNavbar/Navbar.pug ***!
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"navbar\\\"\\u003EHello my friend, how r u?\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack://delivery/./public/components/ThugNavbar/Navbar.pug?");
+eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (text) {pug_html = pug_html + \"\\u003Cdiv class=\\\"page__body\\\"\\u003E\\u003Cdiv class=\\\"navbar\\\"\\u003EFuck my friend, how r u? \" + (pug.escape(null == (pug_interp = text) ? \"\" : pug_interp)) + \"\\u003C\\u002Fdiv\\u003E\\u003C\\u002Fdiv\\u003E\";}.call(this,\"text\" in locals_for_with?locals_for_with.text:typeof text!==\"undefined\"?text:undefined));;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack://delivery/./public/components/ThugNavbar/Navbar.pug?");
 
 /***/ }),
 
@@ -30,6 +40,17 @@ eval("\n\nvar pug_has_own_property = Object.prototype.hasOwnProperty;\n\n/**\n *
 
 /***/ }),
 
+/***/ "./public/components/Page/Page.js":
+/*!****************************************!*\
+  !*** ./public/components/Page/Page.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Page\": () => (/* binding */ Page)\n/* harmony export */ });\n/* harmony import */ var _Page_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page.pug */ \"./public/components/Page/Page.pug\");\n/* harmony import */ var _Page_pug__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Page_pug__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ThugNavbar_Navbar_pug__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ThugNavbar/Navbar.pug */ \"./public/components/ThugNavbar/Navbar.pug\");\n/* harmony import */ var _ThugNavbar_Navbar_pug__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ThugNavbar_Navbar_pug__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nclass Page {\n\n    constructor(parent) {\n        this.parent = parent\n    }\n\n    render(header) {\n        this.parent.innerHTML = _Page_pug__WEBPACK_IMPORTED_MODULE_0___default()({text: header});\n    }\n}\n\n//# sourceURL=webpack://delivery/./public/components/Page/Page.js?");
+
+/***/ }),
+
 /***/ "./public/components/ThugNavbar/thugNavbar.js":
 /*!****************************************************!*\
   !*** ./public/components/ThugNavbar/thugNavbar.js ***!
@@ -37,7 +58,7 @@ eval("\n\nvar pug_has_own_property = Object.prototype.hasOwnProperty;\n\n/**\n *
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"thugNavbar\": () => (/* binding */ thugNavbar)\n/* harmony export */ });\n/* harmony import */ var _Navbar_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar.pug */ \"./public/components/ThugNavbar/Navbar.pug\");\n/* harmony import */ var _Navbar_pug__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Navbar_pug__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass thugNavbar {\n\n    constructor(parent) {\n        this.parent = parent\n    }\n\n    render() {\n        this.parent.innerHTML = _Navbar_pug__WEBPACK_IMPORTED_MODULE_0___default()({});\n    }\n}\n\n//# sourceURL=webpack://delivery/./public/components/ThugNavbar/thugNavbar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"thugNavbar\": () => (/* binding */ thugNavbar)\n/* harmony export */ });\n/* harmony import */ var _Navbar_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar.pug */ \"./public/components/ThugNavbar/Navbar.pug\");\n/* harmony import */ var _Navbar_pug__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Navbar_pug__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass thugNavbar {\n\n    constructor(parent) {\n        this.parent = parent\n    }\n\n    render() {\n        this.parent.innerHTML = _Navbar_pug__WEBPACK_IMPORTED_MODULE_0___default()({text: \"Hello hello\"});\n    }\n}\n\n//# sourceURL=webpack://delivery/./public/components/ThugNavbar/thugNavbar.js?");
 
 /***/ }),
 
@@ -48,7 +69,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_ThugNavbar_thugNavbar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ThugNavbar/thugNavbar.js */ \"./public/components/ThugNavbar/thugNavbar.js\");\n // import {Navbar} from \"./components/Navbar/Navbar.js\";\n \n\nconst application = document.getElementById(\"app\");\n\nlet hello = document.createElement(\"h1\");\nhello.textContent = 'Hello World'\n\nconst nav = new _components_ThugNavbar_thugNavbar_js__WEBPACK_IMPORTED_MODULE_0__.thugNavbar(application);\nnav.render();\n application.appendChild(hello);\n\n//# sourceURL=webpack://delivery/./public/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_ThugNavbar_thugNavbar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ThugNavbar/thugNavbar.js */ \"./public/components/ThugNavbar/thugNavbar.js\");\n/* harmony import */ var _components_Page_Page_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Page/Page.js */ \"./public/components/Page/Page.js\");\n // import {Navbar} from \"./components/Navbar/Navbar.js\";\n \n \n\nconst application = document.getElementById(\"app\");\n\nlet hello = document.createElement(\"h1\");\nhello.textContent = 'Hello World'\n\nconst nav = new _components_ThugNavbar_thugNavbar_js__WEBPACK_IMPORTED_MODULE_0__.thugNavbar(application);\nnav.render(\"hello\");\n\n\n\napplication.appendChild(hello);\n\n//# sourceURL=webpack://delivery/./public/main.js?");
 
 /***/ }),
 

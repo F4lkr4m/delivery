@@ -7,6 +7,6 @@ export class thugNavbar {
     }
 
     render() {
-        this.parent.innerHTML = Navbar({});
+        this.parent.innerHTML = Navbar({text: "Hello hello"});
     }
 }
