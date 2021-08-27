@@ -1,11 +1,16 @@
  // import {Navbar} from "./components/Navbar/Navbar.js";
  import {thugNavbar} from "./components/ThugNavbar/thugNavbar.js"
+ import { Router } from "./modules/router.js"
+ import { InitIndex } from "./components/InitIndex/InitIndex";
 
-const application = document.getElementById("app");
+ const app = document.getElementById("app");
+ const router = new Router(app);
+const goFunc = (page) => router.openPage(page);
 
-let hello = document.createElement("h1");
-hello.textContent = 'Hello World'
+const initIndex = new InitIndex({root: app});
+initIndex.render();
+const navbarView = initIndex.getNavbarPlace();
+const view = initIndex.getViewPlace();
 
-const nav = new thugNavbar(application);
-nav.render();
- application.appendChild(hello);
+
+

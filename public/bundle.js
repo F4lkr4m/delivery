@@ -9,6 +9,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./public/components/InitIndex/IndexTmpl.pug":
+/*!***************************************************!*\
+  !*** ./public/components/InitIndex/IndexTmpl.pug ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cheader class=\\\"header\\\" id=\\\"header\\\"\\u003E\\u003C\\u002Fheader\\u003E\\u003Cmain class=\\\"view\\\" id=\\\"view-place\\\"\\u003E\\u003C\\u002Fmain\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack://delivery/./public/components/InitIndex/IndexTmpl.pug?");
+
+/***/ }),
+
 /***/ "./public/components/ThugNavbar/Navbar.pug":
 /*!*************************************************!*\
   !*** ./public/components/ThugNavbar/Navbar.pug ***!
@@ -30,6 +40,17 @@ eval("\n\nvar pug_has_own_property = Object.prototype.hasOwnProperty;\n\n/**\n *
 
 /***/ }),
 
+/***/ "./public/components/InitIndex/InitIndex.js":
+/*!**************************************************!*\
+  !*** ./public/components/InitIndex/InitIndex.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"InitIndex\": () => (/* binding */ InitIndex)\n/* harmony export */ });\n/* harmony import */ var _IndexTmpl_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IndexTmpl.pug */ \"./public/components/InitIndex/IndexTmpl.pug\");\n/* harmony import */ var _IndexTmpl_pug__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_IndexTmpl_pug__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass InitIndex {\n    constructor({\n        root = document.body\n    } = {}) {\n        this.root = root;\n    }\n\n    render() {\n        this.root.innerHTML = _IndexTmpl_pug__WEBPACK_IMPORTED_MODULE_0___default()({});\n    }\n\n    getViewPlace() {\n        return this.root.querySelector('main');\n    }\n\n    getNavbarPlace() {\n        return this.root.querySelector('header');\n    }\n}\n\n//# sourceURL=webpack://delivery/./public/components/InitIndex/InitIndex.js?");
+
+/***/ }),
+
 /***/ "./public/components/ThugNavbar/thugNavbar.js":
 /*!****************************************************!*\
   !*** ./public/components/ThugNavbar/thugNavbar.js ***!
@@ -48,7 +69,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_ThugNavbar_thugNavbar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ThugNavbar/thugNavbar.js */ \"./public/components/ThugNavbar/thugNavbar.js\");\n // import {Navbar} from \"./components/Navbar/Navbar.js\";\n \n\nconst application = document.getElementById(\"app\");\n\nlet hello = document.createElement(\"h1\");\nhello.textContent = 'Hello World'\n\nconst nav = new _components_ThugNavbar_thugNavbar_js__WEBPACK_IMPORTED_MODULE_0__.thugNavbar(application);\nnav.render();\n application.appendChild(hello);\n\n//# sourceURL=webpack://delivery/./public/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_ThugNavbar_thugNavbar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ThugNavbar/thugNavbar.js */ \"./public/components/ThugNavbar/thugNavbar.js\");\n/* harmony import */ var _modules_router_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/router.js */ \"./public/modules/router.js\");\n/* harmony import */ var _components_InitIndex_InitIndex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/InitIndex/InitIndex */ \"./public/components/InitIndex/InitIndex.js\");\n // import {Navbar} from \"./components/Navbar/Navbar.js\";\n \n \n \n\n const app = document.getElementById(\"app\");\n const router = new _modules_router_js__WEBPACK_IMPORTED_MODULE_1__.Router(app);\nconst goFunc = (page) => router.openPage(page);\n\nconst initIndex = new _components_InitIndex_InitIndex__WEBPACK_IMPORTED_MODULE_2__.InitIndex({root: app});\ninitIndex.render();\nconst navbarView = initIndex.getNavbarPlace();\nconst view = initIndex.getViewPlace();\n\n\n\n\n\n//# sourceURL=webpack://delivery/./public/main.js?");
+
+/***/ }),
+
+/***/ "./public/modules/router.js":
+/*!**********************************!*\
+  !*** ./public/modules/router.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Router\": () => (/* binding */ Router)\n/* harmony export */ });\nconst urls = {\n    main: {\n        standardUrl: '/',\n        regularUrl: null\n    },\n    signup: {\n        standardUrl: '/signup',\n        regularUrl: null\n    },\n    signin: {\n        standardUrl: '/signin',\n        regularUrl: null\n    },\n    logout: {\n        standardUrl: 'logout',\n        regularUrl: null\n    }\n}\n\nclass Router {\n    constructor(params) {\n        this.params = params;\n        this.routes = new Map();\n        this.followLinks = this.followLinks.bind(this);\n        this.params.addEventListener('click', this.followLinks);\n        window.addEventListener('popstate', (event) => {\n            this.openPage(window.location.pathname, true);\n        })\n    }\n\n    windowHistory(page, isBack) {\n        if (!isBack) {\n            window.history.pushState({}, '', page);\n        }\n\n        window.history.replaceState({}, '', page);\n    }\n\n    addRoute(page, handler) {\n        this.routes.set(page, handler)\n    }\n\n    openPage(page, isBack = false) {\n        Object.entries(urls).forEach(([url, { standardUrl, regularUrl}]) => {\n            if (page === url && isBack && url === 'logout') {\n                this.openPage('main', isBack);\n                return;\n            }\n\n            if (page === url || (regularUrl && regularUrl.test(page))) {\n                if (page === url) {\n                    page = standardUrl\n                }\n\n                this.windowHistory(page, isBack);\n\n                if (this.routes.get(url)) {\n                    this.routes.get(url).render(page);\n                } else {\n                    this.openPage('main', isBack);\n                }\n\n            }\n        })\n    }\n\n    followLinks(event) {\n        if (event.target.closest('a') instanceof HTMLAnchorElement) {\n            if (event.target.closest('a').href === event.includes('#')) {\n                event.preventDefault();\n                return;\n            }\n\n            event.preventDefault();\n            const link = event.target.closest('a').pathname;\n            this.openPage(link);\n        }\n\n        if (event.target instanceof HTMLBaseElement) {\n            event.preventDefault();\n        }\n    }\n}\n\n//# sourceURL=webpack://delivery/./public/modules/router.js?");
 
 /***/ }),
 
