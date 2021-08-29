@@ -15,7 +15,7 @@
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (text) {pug_mixins[\"navbar\"] = pug_interp = function(text){\nvar block = (this && this.block), attributes = (this && this.attributes) || {};\npug_html = pug_html + \"\\u003Cdiv class=\\\"navbar\\\"\\u003EFuck my friend, how r u? \" + (pug.escape(null == (pug_interp = text) ? \"\" : pug_interp)) + \"\\u003C\\u002Fdiv\\u003E\";\n};\npug_html = pug_html + \"\\u003Cdiv class=\\\"page__body\\\"\\u003E\";\npug_mixins[\"navbar\"](text);\npug_html = pug_html + \"\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"text\\\"\\u003Etext\\u003C\\u002Fdiv\\u003E\";}.call(this,\"text\" in locals_for_with?locals_for_with.text:typeof text!==\"undefined\"?text:undefined));;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack://delivery/./public/components/Page/Page.pug?");
+eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"page__body\\\"\\u003E\" + (null == (pug_interp = __webpack_require__(/*! ../ThugNavbar/Navbar.pug */ \"./public/components/ThugNavbar/Navbar.pug\").call(this, locals)) ? \"\" : pug_interp) + \"\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"text\\\"\\u003Etexting\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack://delivery/./public/components/Page/Page.pug?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;\n\n\n;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack://delivery/./public/components/ThugNavbar/Navbar.pug?");
+eval("var pug = __webpack_require__(/*! !../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (text) {pug_html = pug_html + \"\\u003Cdiv class=\\\"navbar\\\"\\u003EFuck my friend, how r u? \" + (pug.escape(null == (pug_interp = text) ? \"\" : pug_interp)) + \"\\u003C\\u002Fdiv\\u003E\";}.call(this,\"text\" in locals_for_with?locals_for_with.text:typeof text!==\"undefined\"?text:undefined));;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack://delivery/./public/components/ThugNavbar/Navbar.pug?");
 
 /***/ }),
 
