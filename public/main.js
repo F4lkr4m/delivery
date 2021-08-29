@@ -7,9 +7,9 @@ const application = document.getElementById("app");
 let hello = document.createElement("h1");
 hello.textContent = 'Hello World'
 
-const nav = new thugNavbar(application);
-nav.render("hello");
-
-
+// const nav = new thugNavbar(application);
+// nav.render("hello");
+const page = new Page(application);
+page.render({text: "Hell"});
 
 application.appendChild(hello);

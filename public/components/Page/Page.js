@@ -7,7 +7,7 @@ export class Page {
         this.parent = parent
     }
 
-    render(header) {
-        this.parent.innerHTML = PageTemp({text: header});
+    render(text) {
+        this.parent.innerHTML = PageTemp(text);
     }
 }
