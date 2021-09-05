@@ -1,0 +1,17 @@
+div.auth
+    div.auth-cont
+        h2.auth-cont__title Регистрация
+        form(id="auth-form")
+            input(type="email" id="email" placeholder="example@mail.ru" name="email" data-name="Email")
+            p(id="emailError", class="error") Email
+            input(type="tel" id="number" class="auth-input" placeholder="+7 (___) ___ ____" name="phone" value="+7 (___) ___ ____" data-name="Телефон")
+            p(id="numberError" class="error") Телефон
+            input(type="text", id="name", placeholder="Name Surname", name="name", data-name="Имя пользователя")
+            p(id="nameError", class="error") Никнейм
+            input(type="password", id="password", placeholder="******", name="password", autocomplete="on", data-name="Пароль")
+            p(id="passwordError", class="error") Пароль
+            input(type="password", id="repeatPassword", placeholder="******", name="repeatPassword", autocomplete="on", data-name="Повторите пароль")
+            p(id="repeatPasswordError" class="error") Повторите пароль
+            input(type="submit", class="button", value="Зарегистрироваться")
+            p(id="serverError", class="error red_error")
+            p(style="text-align: center;", class="text link", id="js_toLogin") Войти в существующий аккаунт
