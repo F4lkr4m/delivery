@@ -1,3 +1,3 @@
-const nullop = () => {
+export const nullop = () => {
 
 };
