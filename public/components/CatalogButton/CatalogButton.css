@@ -1,0 +1,8 @@
+.catalog_button {
+    min-width: 200px;
+    min-height: 75px;
+    background-color: unset;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e3e4e6;
+}

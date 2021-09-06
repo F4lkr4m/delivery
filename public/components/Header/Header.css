@@ -1,0 +1,19 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 75px;
+    width: 100vw;
+
+    background-color: whitesmoke;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__right_menu {
+    display: flex;
+    padding: 0;
+}
